@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ name }}'s Resume</title>
+</head>
+<body>
+    <h1>{{ name }}</h1>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Phone:</strong> {{ phone }}</p>
+    <h2>Experience</h2>
+    <ul>
+        {% for job in experience %}
+        <li><strong>{{ job.position }}</strong> at {{ job.company }} ({{ job.years }})</li>
+        {% endfor %}
+    </ul>
+    <h2>Skills</h2>
+    <ul>
+        {% for skill in skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
